@@ -31,4 +31,9 @@ public class MainActivity extends AppCompatActivity {
         String loadFromPref = utils.getString("login", " ");
         editLogin.setText(loadFromPref);
     }
+    private void saveData(){
+        SharedPreferences.Editor editor = utils.edit();
+        editor.putString("login",editLogin.getText().toString());
+        editor.commit();
+    }
 }
