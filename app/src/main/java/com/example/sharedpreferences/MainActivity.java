@@ -25,5 +25,10 @@ public class MainActivity extends AppCompatActivity {
         utils = getSharedPreferences("loginPref", MODE_PRIVATE);
         buttonOk = (Button) findViewById(R.id.buttonOk);
         editLogin = (EditText) findViewById(R.id.editLogin);
+        loadData();
+    }
+    private void loadData(){
+        String loadFromPref = utils.getString("login", " ");
+        editLogin.setText(loadFromPref);
     }
 }
