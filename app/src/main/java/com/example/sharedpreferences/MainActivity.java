@@ -23,5 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         utils = getSharedPreferences("loginPref", MODE_PRIVATE);
+        buttonOk = (Button) findViewById(R.id.buttonOk);
+        editLogin = (EditText) findViewById(R.id.editLogin);
     }
 }
